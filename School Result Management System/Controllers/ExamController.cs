@@ -36,6 +36,7 @@ namespace School_Result_Management_System.Controllers
         [HttpPost]
         public async Task<IActionResult> Create(ExamViewModel examViewModel)
         {
+            //examsList to access the exams information
             IEnumerable<Exam> examsList = _examrepo.GetAllExams();
             ViewBag.Exams = new SelectList(examsList, "Id", "Name");
 
